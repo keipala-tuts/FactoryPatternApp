@@ -8,13 +8,12 @@
 
 <button class="btn btn-primary" @onclick="GetNewTime">Get New Time</button>
 
-@code { 
+@code {
     ISample1? currentTime;
-    
+
     private void GetNewTime()
     {
-        currentTime = new Sample1(); // works but are manually creating an instance and therefore taken it out of dependency injection.
-                                     // if Sample1 has dependencies, they would need to be manually injected. The solution to this is to use a factory
+        currentTime = sample;
     }
 }
     
