@@ -4,4 +4,16 @@
 <PageTitle>Index</PageTitle>
 
 <h1>Hello, world!</h1>
-<h2>@sample.CurrentDateTime</h2>
+<h2>@currentTime?.CurrentDateTime</h2>
+
+<button class="btn btn-primary" @onclick="GetNewTime">Get New Time</button>
+
+@code { 
+    ISample1? currentTime;
+    
+    private void GetNewTime()
+    {
+        currentTime = sample;
+    }
+}
+    
